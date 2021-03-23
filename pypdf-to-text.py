@@ -14,7 +14,7 @@ print(pdf_path)
 with open(r'{}/full_text.txt'.format(pdf_path), 'w'):
     pass
 
-pytesseract.pytesseract.tesseract_cmd = config('TESSERACT_PATH')
+pytesseract.pytesseract.tesseract_cmd = r'{}'.format(config('TESSERACT_PATH'))
 
 for pdf_file in glob.glob('{}/*.pdf'.format(pdf_path)):
     print('after')
