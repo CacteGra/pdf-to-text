@@ -15,7 +15,7 @@ brew install --build-from-source cmake
 
 For Windows and macOS you will need to specify the path to your tesseract install.
 
-Create a .env file where you will store the path to your tesseract installation:
+Create a .env file where you will store the path to your tesseract installation (use the command 'which tesseract'):
 TESSERACT_PATH = '/path/to/tesseract'
 
 So that the path will be set in the script as such:
