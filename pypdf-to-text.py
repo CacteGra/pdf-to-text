@@ -9,7 +9,7 @@ from decouple import config
 pdf_path = input('Please provide the path to pdfs folder: ')
 if list(pdf_path)[-1] == " ":
     pdf_path = pdf_path[:-1]
-    pdf_path = pdf_path.replace('\\', '')
+pdf_path = pdf_path.replace('\\', '')
 print(pdf_path)
 with open(r'{}/full_text.txt'.format(pdf_path), 'w'):
     pass
@@ -41,4 +41,4 @@ for pdf_file in glob.glob('{}/*.pdf'.format(pdf_path)):
                 full_text.write(image_to_text)
 
     with open(r'{}/full_text.txt'.format(pdf_path), 'a') as full_text:
-        full_text.write('\n')
+        full_text.write('\n\n')
